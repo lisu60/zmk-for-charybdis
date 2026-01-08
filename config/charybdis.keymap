@@ -40,23 +40,23 @@
     keymap {
         compatible = "zmk,keymap";
 
-        QWERTY {
+        Dvorak {
             bindings = <
-&kp ESC         &kp N1  &kp N2   &kp N3            &kp N4        &kp N5          &kp N6      &kp N7     &kp N8     &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB         &kp Q   &kp W    &kp E             &kp R         &kp T           &kp Y       &kp U      &kp I      &kp O    &kp P     &kp BSLH
-&kp CAPSLOCK    &kp A   &lt 4 S  &kp D             &lt 3 F       &kp G           &kp H       &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z   &kp X    &kp C             &kp V         &lt 2 B         &kp N       &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                 &kp LEFT_CONTROL  &kp SPACE     &mo 1           &kp DELETE  &kp SPACE
-                                                   &kp LEFT_WIN  &kp LEFT_ALT    &kp ENTER
+&kp ESC       &kp N1            &kp N2     &kp N3            &kp N4        &kp N5            &kp N6      &kp N7     &kp N8  &kp N9  &kp N0  &kp BACKSPACE
+&kp TAB       &kp SINGLE_QUOTE  &kp COMMA  &kp PERIOD        &kp P         &kp Y             &kp F       &kp G      &kp C   &kp R   &kp L   &kp BSLH
+&kp ESC       &kp A             &lt 4 O    &kp E             &lt 3 U       &kp I             &kp D       &kp H      &kp T   &kp N   &kp S   &kp BACKSPACE
+&kp LEFT_ALT  &kp SEMICOLON     &kp Q      &kp J             &kp K         &lt 2 X           &kp B       &kp M      &kp W   &kp V   &kp Z   &mo 1
+                                           &kp LEFT_CONTROL  &kp SPACE     &lt 1 TAB         &kp DELETE  &kp ENTER
+                                                             &kp LEFT_WIN  &kp LEFT_SHIFT    &mo 5
             >;
         };
 
         F_layers {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6        &kp F7     &kp F8     &kp F9     &kp F10       &kp F11    &kp F12
-&trans  &none   &none   &none   &none   &trans        &none      &none      &none      &kp UP_ARROW  &kp MINUS  &kp EQUAL
-&trans  &none   &none   &none   &none   &trans        &mkp LCLK  &mkp RCLK  &kp LEFT   &kp DOWN      &kp RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans  &none         &none      &mkp LCLK  &mkp RCLK  &trans        &none      &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6        &kp F7     &kp F8     &kp F9        &kp F10        &kp F11    &kp F12
+&trans  &none   &none   &none   &none   &trans        &none      &kp HOME   &kp UP_ARROW  &kp PAGE_UP    &kp END    &kp EQUAL
+&trans  &none   &none   &none   &none   &trans        &none      &kp LEFT   &kp DOWN      &kp PAGE_DOWN  &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &none         &none      &mkp LCLK  &mkp RCLK     &trans         &none      &trans
                         &trans  &trans  &To0_macro    &mkp LCLK  &mkp RCLK
                                 &trans  &trans        &trans
             >;
@@ -92,6 +92,17 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &mkp LCLK  &mkp RCLK
                                 &trans  &trans    &trans
+            >;
+        };
+
+        Symbols_1 {
+            bindings = <
+&trans  &trans      &trans      &trans          &trans           &trans           &trans       &trans     &trans        &trans         &trans     &trans
+&trans  &kp LS(LT)  &kp LS(GT)  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans           &trans       &kp HOME   &kp UP_ARROW  &kp PAGE_UP    &kp END    &trans
+&trans  &kp LBKT    &kp RBKT    &kp LS(LPAR)    &kp LS(RPAR)     &kp GRAVE        &kp SQT      &kp LEFT   &kp DOWN      &kp PAGE_DOWN  &kp RIGHT  &trans
+&trans  &trans      &kp Q       &kp LS(COLON)   &kp SEMI         &kp LS(TILDE)    &kp LS(DQT)  &kp SLASH  &kp QUESTION  &kp BACKSLASH  &kp PIPE   &trans
+                                &trans          &trans           &trans           &trans       &trans
+                                                &trans           &trans           &trans
             >;
         };
     };
