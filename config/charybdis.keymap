@@ -53,12 +53,12 @@
 
         F_layers {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6        &kp F7     &kp F8     &kp F9        &kp F10        &kp F11    &kp F12
-&trans  &none   &none   &none   &none   &trans        &none      &kp HOME   &kp UP_ARROW  &kp PAGE_UP    &kp END    &kp EQUAL
-&trans  &none   &none   &none   &none   &trans        &none      &kp LEFT   &kp DOWN      &kp PAGE_DOWN  &kp RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans  &none         &none      &mkp LCLK  &mkp RCLK     &trans         &none      &trans
-                        &trans  &trans  &To0_macro    &mkp LCLK  &mkp RCLK
-                                &trans  &trans        &trans
+&kp F1  &kp F2  &kp F3     &kp F4         &kp F5             &kp F6           &kp F7        &kp F8     &kp F9        &kp F10      &kp F11    &kp F12
+&trans  &none   &none      &none          &none              &trans           &none         &kp AMPS   &kp ASTERISK  &none        &none      &kp EQUAL
+&trans  &none   &kp MINUS  &kp LS(UNDER)  &kp LC(PAGE_UP)    &kp LS(COLON)    &kp LS(EXCL)  &kp HASH   &kp DOLLAR    &kp PERCENT  &kp CARET  &trans
+&trans  &trans  &kp EQUAL  &kp LS(PLUS)   &kp LC(PAGE_DOWN)  &kp SEMI         &kp LS(AT)    &mkp LCLK  &mkp RCLK     &trans       &none      &trans
+                           &trans         &trans             &To0_macro       &mkp LCLK     &mkp RCLK
+                                          &trans             &trans           &trans
             >;
         };
 
